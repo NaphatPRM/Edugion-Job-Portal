@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+        /* Create a Parallax Effect */
+        .bgimg-1 {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .bgimg-2 {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* First image (Logo. Full height) */
+        .bgimg-1 {
+            background-image: url('../../Picture/people_icon.jpg');
+            height: 100px;
+            object-fit: contain;
+        }
+        .bgimg-2 {
+            background-image: url('../../Picture/img_mountains_wide.jpg');
+            object-fit: contain;
+            align-items: center;
+            opacity: 50%;
+        }
+
+        /* Container for flexboxes */
+        section {
+            display: -webkit-flex;
+        }
+
+        .main-nav {
+            -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+            -moz-box-flex: 1;         /* OLD - Firefox 19- */
+            width: 5%;               /* For old syntax, otherwise collapses. */
+            -webkit-flex: 1;          /* Chrome */
+            -ms-flex: 1;              /* IE 10 */
+            flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        }
+
+        .main-sidebar {
+            -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+            -moz-box-flex: 1;         /* OLD - Firefox 19- */
+            width: 40%;               /* For old syntax, otherwise collapses. */
+            -webkit-flex: 1;          /* Chrome */
+            -ms-flex: 1;              /* IE 10 */
+            flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        }
+
+        /* Style the content */
+        article {
+            -webkit-flex: 3;
+            -ms-flex: 3;
+            flex: 3;
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+
+        .bigfont {
+            color: white;
+            font-weight: bolder;
+            text-align: center;
+        }
+        .square_box {
+            width: 900px;
+            height: 250px;
+            background-color: #FFFFFF;
+            padding: 50px;
+            margin: 20px;
+            border-radius: 32px;
+        }
+        .square_box_small {
+            width: 170px;
+            height: 40px;
+            border-radius: 32px;
+            display: inline-block;
+        }
+
+        .user_profile_cover {
+            img {
+                width: 970px;
+                height: 115px;
+                -webkit-border-top-left-radius: 5px;
+                -webkit-border-top-right-radius: 5px;
+                -moz-border-radius-topleft: 5px;
+                -moz-border-radius-topright: 5px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+        }
+        .row {
+            display: flex;
+        }
+
+        /* Create two equal columns that sits next to each other */
+        .column {
+            flex: 50%;
+            padding: 10px;
+            height: 450px; /* Should be removed. Only for demonstration */
+        }
+        /* Turn off parallax scrolling for tablets and phones */
+        @media only screen and (max-device-width: 1600px) {
+            .bgimg-1, .bgimg-2 {
+                background-attachment: scroll;
+                min-height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!--What can we put more in the background that we can make to be more human, Quotes-->
+<!--"Let the person choose what things they want to upload" -> Miscellneous : choose one of them-->
+<header>
+    <img src="../../Picture/edugion-removebg-preview.png" alt="logo">
+</header>
+<!-- Second Parallax Image with Portfolio Text -->
+
+<div class="w3-content w3-container w3-padding-64" id="space">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+    </div>
+</div>
+
+<section>
+    <nav class="main-nav">
+        <div class="square_box_small" style="background-color: #4d4d4d"></div>
+    </nav>
+    <article>
+        <div class="user_profile_cover" id="picture_main">
+            <div class="w3-display-middle" style="white-space:nowrap;"></div>
+            <div id="picture" class="bgimg-2"></div>
+        </div>
+
+        <div id="videos">
+            <div class="row">
+                <div class="column" style="background-color:#0B2445;">
+                    <h2 class="bigfont">FUNNY VIDEOS</h2>
+                    <div class="bgimg-1"></div>
+                </div>
+                <!-- Put Picture or such on -->
+                <div class="column" style="background-color:#0B2445;">
+                    <h2 class="bigfont">SERIOUS VIDEOS</h2>
+                    <div class="bgimg-1"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="soft-hard">
+            <div class="row">
+                <div class="column" style="background-color:#0B2445;">
+                    <div class="square_box">
+                        <h2 class="bigfont" style="color: black">SKILLS</h2>
+                        <li class="smallfont" style="color: black; text-align: left">SOFT SKILLS</li>
+                        <div id="soft">
+                            <div class="square_box_small" style="background-color: #43A047;"></div>
+                            <div class="square_box_small" style="background-color: white; width: 40px;"></div>
+                            <div class="square_box_small" style="background-color: palegoldenrod;"></div>
+                            <div class="square_box_small" style="background-color: white; width: 40px;"></div>
+                            <div class="square_box_small" style="background-color: indianred;"></div>
+                        </div>
+                        <li class="smallfont" style="color: black; text-align: left">HARD SKIILS</li>
+                        <div id="hard">
+                            <div class="square_box_small" style="background-color: #43A047;"></div>
+                            <div class="square_box_small" style="background-color: white; width: 40px;"></div>
+                            <div class="square_box_small" style="background-color: palegoldenrod;"></div>
+                            <div class="square_box_small" style="background-color: white; width: 40px;"></div>
+                            <div class="square_box_small" style="background-color: indianred;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="miscellaneous">
+            <div class="row">
+                <div class="column" style="background-color:#0B2445;">
+                    <div class="square_box">
+                        <h2 class="bigfont" style="color: black">SKILLS</h2>
+                        <li class="smallfont" style="color: black; text-align: left">SOFT SKILLS</li>
+                        <div id="question">
+                            <div class="square_box_small" style="background-color: #43A047; display: inline-block;"></div>
+                            <div class="square_box_small" style="background-color: palegoldenrod; display: inline-block;"></div>
+                            <div class="square_box_small" style="background-color: indianred; display: inline-block;"></div>
+                        </div>
+                        <li class="smallfont" style="color: black; text-align: left">HARD SKIILS</li>
+                        <div id="hard2">
+                            <div class="square_box_small" style="background-color: #43A047; display: inline-block;"></div>
+                            <div class="square_box_small" style="background-color: palegoldenrod; display: inline-block;"></div>
+                            <div class="square_box_small" style="background-color: indianred; display: inline-block;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </article>
+
+    <aside class="main-sidebar">
+        <div class="square_box_small" style="background-color: #4d4d4d"></div>
+    </aside>
+</section>
+</body>
+</html>
